@@ -12,12 +12,28 @@ function square(num) {
 // Call the Function and console the value
 console.log(square(10)); // 100
 
+
 // Q2: What is Function Expression?
 
 // A function expression in JavaScript is another way to define a function. Unlike function declarations, which are hoisted to the top of the scope, function expressions are not hoisted. In a function expression, you create a function and assign it to a variable. Here's the basic syntax:
 
 const square2 = function (num) {
-    return num * num
+    return num * num;
 };
 
 console.log(square2(5)); //25
+
+
+// Q3: What Are First Class Function?
+
+// In JavaScript, functions are considered first-class citizens, meaning they have the same properties and abilities as other values (like numbers, strings, and objects). Here are the characteristics of first-class functions in JavaScript
+
+function square3(num) {
+    return num * num;
+};
+
+function displaySquare(fn) {
+    console.log(fn(10)); //100
+};
+
+displaySquare(square);
