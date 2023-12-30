@@ -47,8 +47,27 @@ displaySquare(square);
     console.log(num * num); //25
 })(5);
 
-(function square5(x) {
+(function (x) {
     return (function (y) {
         console.log(x); //1
     })(2);
 })(1);
+
+// Let's break down the code step by step:
+
+// The outer IIFE (Immediately Invoked Function Expression) takes a parameter x and is immediately invoked with the argument 1.
+
+// Inside the outer function, there is another IIFE that takes a parameter y and is immediately invoked with the argument 2.
+
+// The inner IIFE contains a console.log(x); statement
+
+// Now, let's follow the execution:
+
+// The outer IIFE is invoked with the argument 1. This means x inside the outer function is 1.
+
+// Inside the outer function, the inner IIFE is invoked with the argument 2. This means y inside the inner function is 2.
+
+// Inside the inner function, there is a console.log(x); statement. However, the inner function doesn't have its own x. It looks for x in its lexical scope, which is the outer function. So, it prints the value of x from the outer function, which is 1.
+
+// Therefore, the output of the provided code will be: 1F
+
