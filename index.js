@@ -45,4 +45,10 @@ displaySquare(square);
 
 (function square4(num) {
     console.log(num * num); //25
-})(5)
+})(5);
+
+(function square5(x) {
+    return (function (y) {
+        console.log(x); //1
+    })(2);
+})(1);
