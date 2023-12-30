@@ -37,3 +37,12 @@ function displaySquare(fn) {
 };
 
 displaySquare(square);
+
+
+// Q4: What is IIFE?
+
+// IIFE stands for Immediately Invoked Function Expression. It is a design pattern in JavaScript where you define and execute a function immediately after its creation. The primary purpose of an IIFE is to create a new scope for variables, preventing them from polluting the global scope.
+
+(function square4(num) {
+    console.log(num * num); //25
+})(5)
