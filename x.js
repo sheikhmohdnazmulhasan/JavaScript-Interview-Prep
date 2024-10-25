@@ -59,3 +59,22 @@
 // var ltv = likeTheVideo();
 // ltv();
 // ltv();
+
+// function sum(a) {
+//   return function (b) {
+//     return function (c) {
+//       return a + b + c;
+//     };
+//   };
+// }
+
+// console.log(sum(1)(2)(2));
+
+function sum(a) {
+  return function (b) {
+    if (b) return sum(a + b);
+    return a;
+  };
+}
+
+console.log(sum(10)(2)(2)(10)());
